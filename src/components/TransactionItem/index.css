@@ -1,0 +1,16 @@
+/* Write your CSS here */
+.ck {
+  font-weight: 100 !important;
+  color: #334155 !important;
+}
+.dlt-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.icon-size {
+  width: 20px;
+}
+li {
+  align-items: baseline;
+}

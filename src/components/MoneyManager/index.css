@@ -1,0 +1,93 @@
+/* Write your CSS here */
+.container {
+  background-color: white;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 20px;
+}
+.top-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/money-manager/money-manager-bg.png');
+  background-size: cover;
+  padding: 20px;
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.name {
+  color: #7e858e;
+  font-weight: 500;
+}
+.greating {
+  color: #7e858e;
+  font-weight: 500;
+}
+span {
+  color: #7c3aed;
+}
+
+.form-card {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  padding: 20px;
+  border: 1px solid #7e858e;
+  margin-top: 10px;
+  width: 40%;
+  border-radius: 10px;
+}
+label {
+  color: #cbd5e1;
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+.button {
+  background-color: #0b69ff;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  width: 50px;
+}
+input,
+select {
+  width: 400px;
+  height: 40px;
+}
+ul {
+  padding: 0px;
+}
+.li {
+  border: 1px solid #1e293b;
+  padding: 10px;
+  display: flex;
+  align-items: baseline;
+  width: 450px;
+}
+.list-title-1 {
+  color: black;
+  font-weight: bold;
+  margin-right: 100px;
+}
+.list-title-2 {
+  color: black;
+  font-weight: bold;
+  margin-right: 70px;
+}
+.list-title-3 {
+  color: black;
+  font-weight: bold;
+  margin-right: 100px;
+}
+.manage-history {
+  width: 40%;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #7e858e;
+  margin-top: 10px;
+}
+.lower-card {
+  display: flex;
+  gap: 50px;
+}

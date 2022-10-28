@@ -1,0 +1,44 @@
+/* Write your CSS here */
+.balance-card {
+  width: 350px;
+  background-color: #ecfccb;
+  border: 1px solid #84cc16;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.income-card {
+  width: 350px;
+  background-color: #cffafe;
+  border: 1px solid #06b6d4;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.expenses-card {
+  width: 350px;
+  background-color: #ede9fe;
+  border: 1px solid #7c3aed;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.content {
+  color: #475569;
+}
+.rupee {
+  color: #475569;
+  font-weight: bold;
+  font-size: 22px;
+}
+.img-size {
+  width: 100px;
+  margin-right: 20px;
+}
+.money-track-container {
+  display: flex;
+  justify-content: space-between;
+}
