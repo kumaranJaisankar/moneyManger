@@ -70,7 +70,29 @@ class MoneyManager extends Component {
       }))
     }
   }
-  removeHistory = ()
+
+  removeHistory = (id, amount, type) => {
+    const {histroryList} = this.state
+    if (type === 'Income') {
+      this.setState(prev => ({
+        money: {
+          balance: Number(prev.money.balance) - Number(amount),
+          expenses: Number(prev.money.expenses),
+          income: Number(prev.money.income) - Number(amount),
+        },
+      }))
+    } else if (type === 'Expenses') {
+      this.setState(prev => ({
+        money: {
+          balance: Number(prev.money.balance) + Number(amount),
+          expenses: Number(prev.money.expenses) - Number(amount),
+          income: Number(prev.money.income),
+        },
+      }))
+    }
+    const filterList = histroryList.filter(each => id !== each.id)
+    this.setState({histroryList: filterList})
+  }
 
   render() {
     const {histroryList, type, title, amount, money} = this.state
@@ -99,13 +121,13 @@ class MoneyManager extends Component {
               value={amount}
               id="amount"
               placeholder="AMOUNT"
-              type="number"
+              type="text"
               onChange={this.inputAmount}
             />
             <label htmlFor="type">TYPE</label>
             <select id="type" onChange={this.inputType} value={type}>
               {transactionTypeOptions.map(each => (
-                <option key={each.optionId} value={each.displayText} selected>
+                <option key={each.optionId} value={each.displayText}>
                   {each.displayText}
                 </option>
               ))}
@@ -115,9 +137,9 @@ class MoneyManager extends Component {
             </button>
           </form>
           <div className="manage-history">
-            <p className="history">History</p>
+            <h1 className="history">History</h1>
             <ul>
-              <li className="li">
+              <li key={uuidv4()} className="li">
                 <p className="list-title-1">Title</p>
                 <p className="list-title-2">Amount</p>
                 <p className="list-title-3">Type</p>
