@@ -33,7 +33,9 @@ class MoneyManager extends Component {
   }
 
   inputType = event => {
-    this.setState({type: event.target.value})
+    this.setState({
+      type: event.target.value === 'INCOME' ? 'Income' : 'Expenses',
+    })
   }
 
   manageMoney = event => {
@@ -57,7 +59,7 @@ class MoneyManager extends Component {
         money: {
           balance: Number(prev.money.balance) + Number(amount),
           income: Number(prev.money.income) + Number(amount),
-          expenses: 0,
+          expenses: Number(prev.money.expenses),
         },
       }))
     } else if (type === 'Expenses') {
@@ -125,9 +127,9 @@ class MoneyManager extends Component {
               onChange={this.inputAmount}
             />
             <label htmlFor="type">TYPE</label>
-            <select id="type" onChange={this.inputType} value={type}>
+            <select id="type" onChange={this.inputType} value="Income">
               {transactionTypeOptions.map(each => (
-                <option key={each.optionId} value={each.displayText}>
+                <option key={each.optionId} value={each.optionId}>
                   {each.displayText}
                 </option>
               ))}
